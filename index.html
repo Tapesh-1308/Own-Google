@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Own Google</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="/search.png"/>
+</head>
+
+<body>
+    <section>
+        <div class="main">
+            <img src="google.png" alt="google">
+            <div class="searchBx">
+                <input type="text" name="" class="query" value="" placeholder="Search Google or type a URL">
+                <div class="icons">
+                    <img src="search.png" alt="search">
+                    <img src="mic.png" alt="mic">
+                </div>
+            </div>
+            <div class="button">
+                <button class="searchBtn">Search</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        let query = document.querySelector('.query')
+        let searchBtn = document.querySelector('.searchBtn')
+
+        searchBtn.onclick = () =>{
+            let url = 'https://www.youtube.com/results?search_query=' + query.value;
+            window.open(url, '_self');
+        }
+    </script>
+</body>
+
+</html>
